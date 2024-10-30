@@ -99,6 +99,19 @@ const StudioHome = ({ intl }) => {
       );
     }
 
+    headerButtons.push(
+      <Button
+        variant="outline-primary"
+        iconBefore={AddIcon}
+        size="sm"
+        disabled={showNewCourseContainer}
+        href={libraryHref}
+        data-testid="new-library-button"
+      >
+        {intl.formatMessage(messages.addNewLibraryBtnText)}
+      </Button>,
+    );
+
     return headerButtons;
   }
 

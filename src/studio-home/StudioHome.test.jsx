@@ -116,6 +116,7 @@ describe('<StudioHome />', async () => {
         ...studioHomeMock,
         courseCreatorStatus: COURSE_CREATOR_STATES.granted,
       });
+      const studioBaseUrl = 'http://localhost:18010';
 
       const { getByRole } = render(<RootWrapper />);
       expect(getByRole('button', { name: messages.addNewCourseBtnText.defaultMessage })).toBeInTheDocument();
